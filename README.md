@@ -1,25 +1,13 @@
-# ThamAI — Official Workspace
+# ThamAI
 
-Dự án ThamAI là hệ thống trợ lý AI đa nền tảng gồm:
+Bộ khung chuẩn cho dự án ThamAI, bao gồm:
 
-- Frontend Web (Web Speech API, UI/UX tối ưu)
-- Backend API (Node.js, Express, OpenAI)
-- Hỗ trợ chạy offline và online
-- Triển khai qua GitHub Pages & Render
-- Hệ thống CI/CD tự động bằng GitHub Actions
+- Frontend + Backend
+- GitHub CI
+- GitHub Pages
+- Issue Templates
+- Cấu trúc thư mục chuẩn hoá
 
-## 📂 Cấu trúc dự án
-ThamAI/
- ├─ frontend/        # Giao diện web
- ├─ backend/         # API Server
- ├─ docs/            # Tài liệu hệ thống
- ├─ .github/workflows
- └─ README.md
+## Deploy Pages
 
-## 🚀 Deploy
-Frontend: GitHub Pages  
-Backend: Render.com / Local Offline  
-
-## 👤 Chủ sở hữu
-Organization: **ThamTaoKTM Songdung Lamdung**
-
+Pages sẽ tự động build từ `src/frontend`.
