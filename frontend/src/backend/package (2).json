@@ -1,7 +1,7 @@
 {
   "name": "thamai-backend",
   "version": "1.0.0",
-  "description": "ThamAI backend (Express)",
+  "description": "Backend cho ThamAI - API đơn giản để gọi OpenAI hoặc trả fallback khi offline",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -12,7 +12,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.1.4",
-    "express": "^4.18.2",
-    "node-fetch": "^2.6.7"
+    "express": "^4.18.2"
   }
 }
