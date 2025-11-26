@@ -1,7 +1,9 @@
 // ThamAI backend (Express) - supports OpenAI call if OPENAI_API_KEY present
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
+const cors = require("cors");
+app.use(cors());
+
 const fetch = require('node-fetch');
 
 const app = express();

@@ -1,5 +1,5 @@
 // ThamAI frontend script.js (updated)
-const API_URL = (typeof window !== 'undefined' && window.API_URL) || "https://thamai.onrender.com/api"; // change to your Render URL or set window.API_URL
+const response = await fetch("https://https://thamai.onrender.com/api", ...)
 
 const chat = document.getElementById("chat");
 const userInput = document.getElementById("userInput");
