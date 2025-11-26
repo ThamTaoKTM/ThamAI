@@ -1,0 +1,37 @@
+name: Validate Backend
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate-package:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Validate package.json exists
+      run: |
+        if [ ! -f backend/package.json ]; then
+          echo "❌ backend/package.json is missing!"
+          exit 1
+        fi
+
+    - name: Validate Node.js engine
+      run: |
+        if ! jq -e '.engines.node' backend/package.json > /dev/null; then
+          echo "❌ Missing engines.node field in backend/package.json"
+          exit 1
+        fi
+        echo "✔ engines.node OK"
+
+    - name: Validate server.js exists
+      run: |
+        if [ ! -f backend/server.js ]; then
+          echo "❌ backend/server.js missing!"
+          exit 1
+        fi

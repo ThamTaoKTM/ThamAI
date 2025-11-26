@@ -3,13 +3,20 @@ services:
     name: ThamAI-backend
     env: node
     rootDir: backend
+    region: singapore
+    plan: free
     buildCommand: "npm install"
     startCommand: "npm start"
     autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
 
-staticSites:
-  - name: ThamAI-frontend
+  - type: web
+    name: ThamAI-frontend
+    env: static
     rootDir: frontend
-    buildCommand: ""
-    publishDir: "."
+    region: singapore
+    buildCommand: "echo 'Static site'"
+    staticPublishPath: "."
     autoDeploy: true
