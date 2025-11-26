@@ -53,7 +53,12 @@ sendBtn.addEventListener("click", ()=>{
 async function getAIResponseStreaming(promptText){
     const span = appendMessage("ai","");
     try{
-        const response = await fetch("http://localhost:3000/api",{ method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({prompt:promptText})});
+        const API_URL = "https://thamai.onrender.com/api"; // đổi theo URL thật trên Render
+const response = await fetch(API_URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ prompt: promptText })
+});
         if(!response.ok) throw new Error("Backend lỗi 500");
         const data = await response.json();
         let aiText = (data.choices && data.choices[0] && data.choices[0].message.content) || "Backend offline không trả lời";
