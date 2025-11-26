@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ThamAI-backend
+    env: node
+    rootDir: backend
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+
+staticSites:
+  - name: ThamAI-frontend
+    rootDir: frontend
+    buildCommand: ""
+    publishDir: "."
+    autoDeploy: true

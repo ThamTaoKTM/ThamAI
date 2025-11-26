@@ -1,13 +1,17 @@
-# ThamAI
+# ThamAI — Corrected Project (frontend + backend) with render.yaml
 
-Bộ khung chuẩn cho dự án ThamAI, bao gồm:
+This archive fixes the `src/` nesting issue and provides:
+- frontend/ (static site)
+- backend/ (Node.js Express app)
+- render.yaml (Render auto-config)
+- .github/workflows/deploy-pages.yml (deploy frontend to GitHub Pages)
+- Instructions below.
 
-- Frontend + Backend
-- GitHub CI
-- GitHub Pages
-- Issue Templates
-- Cấu trúc thư mục chuẩn hoá
+## Quick steps to use
+1. Replace your repo contents with the files from this ZIP (or merge).
+2. Commit & push to GitHub.
+3. Set up Render linking the repository (Render will read render.yaml).
+4. On Render: add environment variable `OPENAI_API_KEY` if you want OpenAI calls.
+5. Ensure GitHub Pages is configured to use the `gh-pages` branch (the workflow will push there).
 
-## Deploy Pages
-
-Pages sẽ tự động build từ `src/frontend`.
+See full instructions in the original README in the repo.
