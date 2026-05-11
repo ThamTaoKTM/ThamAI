@@ -1,5 +1,5 @@
 // Minimal frontend example - edit API_URL to your backend
-const API_URL = window.API_URL || "https://YOUR_RENDER_BACKEND_URL/api";
+const API_URL = "https://thamai-backend-new.onrender.com/chat";
 
 const chat = document.getElementById("chat");
 const userInput = document.getElementById("userInput");
